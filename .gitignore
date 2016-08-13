@@ -1,6 +1,3 @@
-# compail
-bin/
 
-
-# other setting
-.setting/
+/bin/
+/miglayout15-swing.jar
