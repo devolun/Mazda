@@ -21,6 +21,7 @@ public class MazdaDB {
 
 	}
 
+	
 	public String welcome(String str) throws SQLException {
 
 		Connection con = null;
@@ -52,6 +53,7 @@ public class MazdaDB {
 
 	}
 
+	
 	public String fromDB(String nameDB, String nameField) throws SQLException {
 
 		Connection con = null;
@@ -82,6 +84,7 @@ public class MazdaDB {
 		return null;
 	}
 
+	
 	public String inDB(String nameDB, String nameField, String value) {
 		Connection c = null;
 		Statement stmt = null;
@@ -105,6 +108,7 @@ public class MazdaDB {
 		return null;
 	}
 
+	
 	public int inDB(String nameDB, String nameField, int value) {
 		Connection c = null;
 		Statement stmt = null;

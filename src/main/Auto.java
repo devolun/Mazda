@@ -1,16 +1,18 @@
 package main;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
 public abstract class Auto {
 	private String name;
 	private String pathFile;
 	private String urlMazda;
 	private String icon;
+
+	
 
 	public String getIcon() {
 		return icon;
@@ -39,23 +41,24 @@ public abstract class Auto {
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	
 	public String readFileDesc() throws IOException {
-		File file = new File(pathFile);
+	    File file = new File( pathFile );
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(
-				new FileInputStream(file)));
-		String line = null;
-		while ((line = br.readLine()) != null) {
-			return line;
-		}
-		br.close();
+	    BufferedReader br = new BufferedReader (new InputStreamReader(new FileInputStream( file )));
+	    String line = null;
+	    while ((line = br.readLine()) != null) {
+	    	return line;
+	    }
+	    br.close();
 		return line;
-	}
+		}
+	
 
 	public void goToLink() {
 		try {
