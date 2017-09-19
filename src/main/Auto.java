@@ -50,7 +50,8 @@ public abstract class Auto {
 	public String readFileDesc() throws IOException {
 	    File file = new File( pathFile );
 
-	    BufferedReader br = new BufferedReader (new InputStreamReader(new FileInputStream( file )));
+	    @SuppressWarnings("resource")
+		BufferedReader br = new BufferedReader (new InputStreamReader(new FileInputStream( file )));
 	    String line = null;
 	    while ((line = br.readLine()) != null) {
 	    	return line;
