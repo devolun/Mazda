@@ -23,5 +23,8 @@ public class MazdaStrings {
 
 	public String save = "Save";
 	public String txtKm = " km.";
+	
+	public String oilChange = "Замена масла";
+	public String beltChange = "Замена ремня";
 
 }

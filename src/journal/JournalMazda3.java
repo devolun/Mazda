@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 import main.MazdaDB;
+import main.MazdaStrings;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.ImageIcon;
@@ -26,11 +27,14 @@ public class JournalMazda3 extends JPanel {
 	private JTextField textField_breaks;
 	private JTextField textField_belt;
 	
+	String oilChange = new MazdaStrings().oilChange;
+	String beltChange = new MazdaStrings().beltChange;
+	
 	public JournalMazda3() {
 		
 		setLayout(new MigLayout("", "[85.00px][86.00][100.00px,grow]", "[][][][20.00][20.00][40.00][]"));
 
-		final JLabel label = new JLabel("Замена масла");
+		final JLabel label = new JLabel(oilChange);
 		add(label, "cell 0 0,growx,aligny top");
 		
 				textField_oil = new JTextField();
@@ -55,9 +59,7 @@ public class JournalMazda3 extends JPanel {
 			});				
 
 
-
-
-		JLabel label_2 = new JLabel("Замена ремня");
+		JLabel label_2 = new JLabel(beltChange);
 		add(label_2, "cell 0 1,alignx left");
 		
 				textField_belt = new JTextField();
@@ -107,8 +109,6 @@ public class JournalMazda3 extends JPanel {
 				}
 			});
 				
-
-		
 		
 		JButton btnCancel = new JButton("Отменить", new ImageIcon("res/cancel.png"));
 		add(btnCancel, "cell 0 6,alignx right");
