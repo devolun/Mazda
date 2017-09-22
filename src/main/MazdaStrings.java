@@ -22,9 +22,12 @@ public class MazdaStrings {
 	public String checkInt = "Enter an integer please";
 
 	public String save = "Save";
+	public String cancel = "Cancel";
 	public String txtKm = " km.";
 	
 	public String oilChange = "Замена масла";
 	public String beltChange = "Замена ремня";
+	public String breaksChange = "Замена колодок";
+	public String inputInt = "Введите целое число";
 
 }

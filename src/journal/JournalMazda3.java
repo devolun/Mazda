@@ -29,6 +29,10 @@ public class JournalMazda3 extends JPanel {
 	
 	String oilChange = new MazdaStrings().oilChange;
 	String beltChange = new MazdaStrings().beltChange;
+	String breaksChange = new MazdaStrings().breaksChange;
+	String inputInt = new MazdaStrings().inputInt;
+	String save = new MazdaStrings().save;
+	String cancel = new MazdaStrings().cancel;
 	
 	public JournalMazda3() {
 		
@@ -53,7 +57,7 @@ public class JournalMazda3 extends JPanel {
 					MazdaDB.getInstance().inDB("Mazda3_oil", "change_old", oilOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 				}
 			});				
@@ -77,15 +81,14 @@ public class JournalMazda3 extends JPanel {
 					MazdaDB.getInstance().inDB("Mazda3_belt", "change_old", beltOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 
 				}
 			});				
 
-
 		
-		JLabel label_1 = new JLabel("Замена колодок");
+		JLabel label_1 = new JLabel(breaksChange);
 		add(label_1, "cell 0 2,alignx left");
 		
 				textField_breaks = new JTextField();
@@ -103,17 +106,17 @@ public class JournalMazda3 extends JPanel {
 					MazdaDB.getInstance().inDB("Mazda3_breaks", "change_old", oilOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 
 				}
 			});
 				
 		
-		JButton btnCancel = new JButton("Отменить", new ImageIcon("res/cancel.png"));
+		JButton btnCancel = new JButton(cancel, new ImageIcon("res/cancel.png"));
 		add(btnCancel, "cell 0 6,alignx right");
 
-		JButton btnOk = new JButton("Сохранить", new ImageIcon("res/ok.png"));
+		JButton btnOk = new JButton(save, new ImageIcon("res/ok.png"));
 		add(btnOk, "cell 2 6,alignx right");
 		
 		btnOk.addActionListener(new ActionListener() {
@@ -124,7 +127,7 @@ public class JournalMazda3 extends JPanel {
 				MazdaDB.getInstance().inDB("Mazda3_oil", "change_old", oilOld);
 
 				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null,	"Введите целое число");
+					JOptionPane.showMessageDialog(null,	inputInt);
 				}
 
 			}
