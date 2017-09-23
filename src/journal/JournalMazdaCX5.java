@@ -6,7 +6,6 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 import main.MazdaDB;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -16,17 +15,18 @@ import net.miginfocom.swing.MigLayout;
 
 import javax.swing.ImageIcon;
 
-public class JournalMazdaCX5 extends JPanel {
+public class JournalMazdaCX5 extends JPanel implements JournalMazdasStrins {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField textField_oil;
 	private JTextField textField_breaks;
 	private JTextField textField_belt;
+	
 	public JournalMazdaCX5() {
 
 		setLayout(new MigLayout("", "[85.00px][86.00][100.00px,grow]", "[][][][20.00][20.00][40.00][]"));
 
-		final JLabel label = new JLabel("Замена масла");
+		final JLabel label = new JLabel(oilChange);
 		add(label, "cell 0 0,growx,aligny top");
 		
 				textField_oil = new JTextField();
@@ -45,14 +45,14 @@ public class JournalMazdaCX5 extends JPanel {
 					MazdaDB.getInstance().inDB("MazdaCX5_oil", "change_old", oilOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 				}
 			});				
 
 		
 		
-		JLabel label_2 = new JLabel("Замена ремня");
+		JLabel label_2 = new JLabel(beltChange);
 		add(label_2, "cell 0 1,alignx left");
 		
 				textField_belt = new JTextField();
@@ -70,7 +70,7 @@ public class JournalMazdaCX5 extends JPanel {
 					MazdaDB.getInstance().inDB("MazdaCX5_belt", "change_old", beltOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 
 				}
@@ -78,7 +78,7 @@ public class JournalMazdaCX5 extends JPanel {
 		
 		
 
-		JLabel label_1 = new JLabel("Замена колодок");
+		JLabel label_1 = new JLabel(breaksChange);
 		add(label_1, "cell 0 2,alignx left");
 		
 				textField_breaks = new JTextField();
@@ -96,7 +96,7 @@ public class JournalMazdaCX5 extends JPanel {
 					MazdaDB.getInstance().inDB("MazdaCX5_breaks", "change_old", oilOld);
 
 					} catch (Exception ex) {
-						JOptionPane.showMessageDialog(null,	"Введите целое число");
+						JOptionPane.showMessageDialog(null,	inputInt);
 					}
 				}
 			});
@@ -105,7 +105,7 @@ public class JournalMazdaCX5 extends JPanel {
 			
 
 
-		JButton btnCancel = new JButton("Отменить", new ImageIcon("res/cancel.png"));
+		JButton btnCancel = new JButton(cancel, new ImageIcon("res/cancel.png"));
 		add(btnCancel, "cell 0 6,alignx right");
 		
 		btnCancel.addActionListener(new ActionListener() {
@@ -116,7 +116,7 @@ public class JournalMazdaCX5 extends JPanel {
 		});
 		
 		
-		JButton btnOk = new JButton("Сохранить", new ImageIcon("res/ok.png"));
+		JButton btnOk = new JButton(save, new ImageIcon("res/ok.png"));
 		add(btnOk, "cell 2 6,alignx right");
 		
 		btnOk.addActionListener(new ActionListener() {
@@ -127,24 +127,17 @@ public class JournalMazdaCX5 extends JPanel {
 				MazdaDB.getInstance().inDB("MazdaCX5_oil", "change_old", oilOld);
 
 				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null,	"Введите целое число");
+					JOptionPane.showMessageDialog(null,	inputInt);
 				}
 	
-			
-			
 			
 			try {
 				int oilOld = Integer.parseInt(textField_oil.getText());
 				MazdaDB.getInstance().inDB("MazdaCX5_breaks", "change_old", oilOld);
 				
 			} catch (Exception ex) {
-				JOptionPane.showMessageDialog(null,	"Введите целое число");
+				JOptionPane.showMessageDialog(null,	inputInt);
 			}
-			
-			
-			
-			
-			
 			
 
 			}

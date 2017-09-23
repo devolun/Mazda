@@ -14,25 +14,17 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 import main.MazdaDB;
-import main.MazdaStrings;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.ImageIcon;
 
-public class JournalMazda3 extends JPanel {
+public class JournalMazda3 extends JPanel implements JournalMazdasStrins {
 
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField textField_oil;
 	private JTextField textField_breaks;
 	private JTextField textField_belt;
-	
-	String oilChange = new MazdaStrings().oilChange;
-	String beltChange = new MazdaStrings().beltChange;
-	String breaksChange = new MazdaStrings().breaksChange;
-	String inputInt = new MazdaStrings().inputInt;
-	String save = new MazdaStrings().save;
-	String cancel = new MazdaStrings().cancel;
 	
 	public JournalMazda3() {
 		
