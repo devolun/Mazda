@@ -102,9 +102,6 @@ public class JournalMazdaCX5 extends JPanel implements JournalMazdasStrins {
 			});
 				
 
-			
-
-
 		JButton btnCancel = new JButton(cancel, new ImageIcon("res/cancel.png"));
 		add(btnCancel, "cell 0 6,alignx right");
 		

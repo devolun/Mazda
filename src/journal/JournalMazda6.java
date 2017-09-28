@@ -103,7 +103,6 @@ public class JournalMazda6 extends JPanel implements JournalMazdasStrins {
 				}
 			});
 		
-
 		
 		JButton button = new JButton(cancel, new ImageIcon("res/cancel.png"));
 		add(button, "cell 0 6,alignx right");
