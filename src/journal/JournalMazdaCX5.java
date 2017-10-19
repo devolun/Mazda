@@ -50,8 +50,6 @@ public class JournalMazdaCX5 extends JPanel implements JournalMazdasStrins {
 				}
 			});				
 
-		
-		
 		JLabel label_2 = new JLabel(beltChange);
 		add(label_2, "cell 0 1,alignx left");
 		
@@ -75,8 +73,6 @@ public class JournalMazdaCX5 extends JPanel implements JournalMazdasStrins {
 
 				}
 			});	
-		
-		
 
 		JLabel label_1 = new JLabel(breaksChange);
 		add(label_1, "cell 0 2,alignx left");

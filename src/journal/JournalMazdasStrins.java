@@ -4,11 +4,11 @@ import main.MazdaStrings;
 
 public interface JournalMazdasStrins {
 	
-	String oilChange = new MazdaStrings().oilChange;
-	String beltChange = new MazdaStrings().beltChange;
-	String breaksChange = new MazdaStrings().breaksChange;
-	String inputInt = new MazdaStrings().inputInt;
-	String save = new MazdaStrings().save;
-	String cancel = new MazdaStrings().cancel;
+	final String oilChange = new MazdaStrings().oilChange;
+	final String beltChange = new MazdaStrings().beltChange;
+	final String breaksChange = new MazdaStrings().breaksChange;
+	final String inputInt = new MazdaStrings().inputInt;
+	final String save = new MazdaStrings().save;
+	final String cancel = new MazdaStrings().cancel;
 
 }
