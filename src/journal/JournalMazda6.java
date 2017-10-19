@@ -17,13 +17,10 @@ import javax.swing.ImageIcon;
 
 public class JournalMazda6 extends JPanel implements JournalMazdasStrins {
 
-
 	private static final long serialVersionUID = 1L;
 	private JTextField textField_oil;
 	private JTextField textField_breaks;
 	private JTextField textField_belt;
-	
-
 	
 	public JournalMazda6() {
 
